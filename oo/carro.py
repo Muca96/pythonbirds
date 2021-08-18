@@ -69,13 +69,13 @@ os seguientes atributos:
      >>> carro = Carro(direcao, motor)
      >>> carro.calcular_velocidade()
      0
-     >>> motor.acelerar()
+     >>> carro.acelerar()
      >>> carro.calcular_velocidade()
      1
-     >>> motor.acelerar()
+     >>> carro.acelerar()
      >>> carro.calcular_velocidade()
      2
-     >>> motor.frear()
+     >>> carro.frear()
      >>> carro.calcular_velocidade()
      0
      >>> carro.calcular_direcao()
@@ -92,6 +92,22 @@ os seguientes atributos:
 
 """
 
+class Carro :
+    def __init__(self,direcao,motor):
+        self.motor = motor
+        self.direcao = direcao
+    def calcular_velocidade(self):
+        return self.motor.velocidade
+    def acelerar(self):
+        return self.motor.acelerar()
+    def frear(self):
+        return self.motor.frear()
+    def calcular_direcao(self):
+        return self.direcao.valor
+    def girar_a_direita(self):
+        return  self.direcao.girar_a_direita()
+    def girar_a_esquerda(self):
+        return self.direcao.girar_a_esquerda()
 
 
 
